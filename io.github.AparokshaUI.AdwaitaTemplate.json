@@ -50,7 +50,7 @@
         "install -Dm644 data/io.github.AparokshaUI.AdwaitaTemplate.metainfo.xml $DESTDIR/app/share/metainfo/io.github.AparokshaUI.AdwaitaTemplate.metainfo.xml",
         "install -Dm644 data/io.github.AparokshaUI.AdwaitaTemplate.desktop $DESTDIR/app/share/applications/io.github.AparokshaUI.AdwaitaTemplate.desktop",
         "install -Dm644 data/icons/io.github.AparokshaUI.AdwaitaTemplate.svg $DESTDIR/app/share/icons/hicolor/scalable/apps/io.github.AparokshaUI.AdwaitaTemplate.svg",
-        "install -Dm644 data/icons/io.github.AparokshaUI.AdwaitaTemplate-symbolic.svg $DESTDIR/app/share/icons/symbolic/apps/io.github.AparokshaUI.AdwaitaTemplate.svg"
+        "install -Dm644 data/icons/io.github.AparokshaUI.AdwaitaTemplate-symbolic.svg $DESTDIR/app/share/icons/hicolor/symbolic/apps/io.github.AparokshaUI.AdwaitaTemplate-symbolic.svg"
       ]
     }
   ]
