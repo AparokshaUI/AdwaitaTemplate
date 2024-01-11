@@ -39,6 +39,17 @@ flatpak install org.gnome.Sdk
 sudo flatpak-builder build-dir org.freedesktop.Sdk.Extension.swift.json --install --force-clean
 ```
 
+> [!NOTE]  
+> If you get the error:
+> ```
+> bwrap: Can't find source path [path]: Permission denied
+> ```
+>
+> Run the following command:
+> ```
+> chmod u+s /usr/bin/bwrap
+> ```
+
 ### Install Other Tools
 
 The following tools are required or recommended for editing this repository:
