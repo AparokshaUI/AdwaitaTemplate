@@ -16,10 +16,8 @@ struct AdwaitaTemplate: App {
                 .topToolbar {
                     ToolbarView(app: app, window: window)
                 }
-                .onAppear {
-                    window.setDefaultSize(width: 450, height: 300)
-                }
         }
+        .defaultSize(width: 450, height: 300)
     }
 
 }
