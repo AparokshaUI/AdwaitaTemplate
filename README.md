@@ -50,6 +50,12 @@ sudo flatpak-builder build-dir org.freedesktop.Sdk.Extension.swift.json --instal
 > chmod u+s /usr/bin/bwrap
 > ```
 
+> [!NOTE]
+> Add the `--user` flag to the installation command if you get the error:
+> ```
+> open(O_TMPFILE): Permission denied
+> ```
+
 ### Install Other Tools
 
 The following tools are required or recommended for editing this repository:
