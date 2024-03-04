@@ -11,7 +11,7 @@ struct AdwaitaTemplate: App {
 
     var scene: Scene {
         Window(id: "main") { window in
-            Text("Hello, world!")
+            Text(Loc.helloWorld)
                 .padding()
                 .topToolbar {
                     ToolbarView(app: app, window: window)

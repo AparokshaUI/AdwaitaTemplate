@@ -8,16 +8,16 @@ struct ToolbarView: View {
     var view: Body {
         HeaderBar.end {
             Menu(icon: .default(icon: .openMenu), app: app, window: window) {
-                MenuButton("New Window", window: false) {
+                MenuButton(Loc.newWindow, window: false) {
                     app.addWindow("main")
                 }
                 .keyboardShortcut("n".ctrl())
-                MenuButton("Close Window") {
+                MenuButton(Loc.closeWindow) {
                     window.close()
                 }
                 .keyboardShortcut("w".ctrl())
                 MenuSection {
-                    MenuButton("Quit", window: false) {
+                    MenuButton(Loc.quit, window: false) {
                         app.quit()
                     }
                     .keyboardShortcut("q".ctrl())

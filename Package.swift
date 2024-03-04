@@ -6,15 +6,23 @@ import PackageDescription
 let package = Package(
     name: "Adwaita Template",
     dependencies: [
-        .package(url: "https://github.com/AparokshaUI/Adwaita", from: "0.2.0")
+        .package(url: "https://github.com/AparokshaUI/Adwaita", from: "0.2.0"),
+        .package(url: "https://github.com/AparokshaUI/Localized", from: "0.2.0")
     ],
     targets: [
         .executableTarget(
             name: "AdwaitaTemplate",
             dependencies: [
-                .product(name: "Adwaita", package: "Adwaita")
+                .product(name: "Adwaita", package: "Adwaita"),
+                .product(name: "Localized", package: "Localized")
             ],
-            path: "Sources"
+            path: "Sources",
+            resources: [
+                .process("Localized.yml")
+            ],
+            plugins: [
+                .plugin(name: "GenerateLocalized", package: "Localized")
+            ]
         )
     ]
 )
