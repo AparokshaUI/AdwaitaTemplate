@@ -23,6 +23,8 @@ struct ToolbarView: View {
                     .keyboardShortcut("q".ctrl())
                 }
             }
+            .primary()
+            .tooltip("Main Menu")
         }
     }
 
