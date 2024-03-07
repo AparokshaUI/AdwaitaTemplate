@@ -77,5 +77,5 @@ you can use [this tool](https://github.com/flatpak/flatpak-builder-tools/tree/ma
 ## Thanks
 
 ### Dependencies
-- [Adwaita](https://github.com/AparokshaUI/Adwaita) licensed under the [MIT license](https://github.com/AparokshaUI/Adwaita/blob/main/LICENSE.md)
+- [Adwaita](https://github.com/AparokshaUI/Adwaita) licensed under the [MIT License](https://github.com/AparokshaUI/Adwaita/blob/main/LICENSE.md)
 - [Localized](https://github.com/AparokshaUI/Localized) licensed under the [MIT License](https://github.com/AparokshaUI/Localized/blob/master/LICENSE.md)
