@@ -1,7 +1,7 @@
 {
   "app-id": "io.github.AparokshaUI.AdwaitaTemplate",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "45",
+  "runtime-version": "46",
   "sdk": "org.gnome.Sdk",
   "sdk-extensions": [
     "org.freedesktop.Sdk.Extension.swift5"
@@ -35,9 +35,8 @@
       "buildsystem": "simple",
       "sources": [
         {
-          "type": "git",
-          "url": "https://github.com/AparokshaUI/AdwaitaTemplate",
-          "branch": "main"
+          "type": "dir",
+          "path": "."
         }
       ],
       "build-commands": [
