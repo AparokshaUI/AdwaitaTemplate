@@ -17,6 +17,11 @@ Install the [GNOME Builder](https://flathub.org/apps/org.gnome.Builder) IDE.
 
 For designing an app icon, [App Icon Preview](https://flathub.org/apps/org.gnome.design.AppIconPreview) and [Inkscape](https://flathub.org/apps/org.inkscape.Inkscape) are recommended.
 
+> [!NOTE]
+> You do not have to install any dependencies of Adwaita for Swift, including Swift, on your system.
+> The Adwaita template runs in a [Flatpak](https://flatpak.org/).
+> The GNOME Builder will automatically download dependencies from [Flathub](https://flathub.org).
+
 ## Usage
 
 1. Open this project in the GNOME Builder. It will start downloading the dependencies.
