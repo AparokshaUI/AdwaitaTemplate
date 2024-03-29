@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "Adwaita Template",
+    platforms: [
+        .macOS(.v13)
+    ],
     dependencies: [
         .package(url: "https://github.com/AparokshaUI/Adwaita", from: "0.2.0"),
         .package(url: "https://github.com/AparokshaUI/Localized", from: "0.2.0")
