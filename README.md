@@ -39,6 +39,11 @@ For designing an app icon, [App Icon Preview](https://flathub.org/apps/org.gnome
 4. Edit the code. Help is available [here](https://david-swift.gitbook.io/adwaita/), ask questions in the [discussions](https://github.com/AparokshaUI/Adwaita/discussions/).
 5. You can edit the app's icons using the previously installed tools according to [this](https://blogs.gnome.org/tbernard/2019/12/30/designing-an-icon-for-your-app/) tutorial.
 6. In GNOME Builder, click on the dropdown next to the hammer and then on `Export`. Wait until the file manager appears, open the `.flatpak` file and install the app on your device!
+7. If you want to publish your app, replace `debug` in the following build commands by `release`:
+```
+"swift build -c debug --static-swift-stdlib",
+"install -Dm755 .build/debug/AdwaitaTemplate /app/bin/AdwaitaTemplate",
+```
 
 ### Flatpak SPM Generator
 

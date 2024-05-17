@@ -40,8 +40,8 @@
         }
       ],
       "build-commands": [
-        "swift build -c release --static-swift-stdlib",
-        "install -Dm755 .build/release/AdwaitaTemplate /app/bin/AdwaitaTemplate",
+        "swift build -c debug --static-swift-stdlib",
+        "install -Dm755 .build/debug/AdwaitaTemplate /app/bin/AdwaitaTemplate",
         "install -Dm644 data/io.github.AparokshaUI.AdwaitaTemplate.metainfo.xml $DESTDIR/app/share/metainfo/io.github.AparokshaUI.AdwaitaTemplate.metainfo.xml",
         "install -Dm644 data/io.github.AparokshaUI.AdwaitaTemplate.desktop $DESTDIR/app/share/applications/io.github.AparokshaUI.AdwaitaTemplate.desktop",
         "install -Dm644 data/icons/io.github.AparokshaUI.AdwaitaTemplate.svg $DESTDIR/app/share/icons/hicolor/scalable/apps/io.github.AparokshaUI.AdwaitaTemplate.svg",
