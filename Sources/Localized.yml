@@ -15,3 +15,7 @@ closeWindow:
 quit:
     en: Quit
     de: Verlassen
+
+mainMenu:
+    en: Main Menu
+    de: Hauptmenü

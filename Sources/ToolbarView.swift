@@ -24,7 +24,7 @@ struct ToolbarView: View {
                 }
             }
             .primary()
-            .tooltip("Main Menu")
+            .tooltip(Loc.mainMenu)
         }
     }
 
