@@ -21,11 +21,16 @@ For designing an app icon, [App Icon Preview](https://flathub.org/apps/org.gnome
 > You do not have to install any dependencies of Adwaita for Swift, including Swift, on your system.
 > The Adwaita template runs in a [Flatpak](https://flatpak.org/).
 > The GNOME Builder will automatically download dependencies from [Flathub](https://flathub.org).
+> You can also use [Visual Studio Code](https://code.visualstudio.com/) with a Docker [dev container](https://code.visualstudio.com/docs/devcontainers/containers) hosting the Swift toolchain and Adwaita libraries.
 
 ## Usage
 
 1. Open this project in the GNOME Builder. It will start downloading the dependencies.
-2. Build and run the application using the "run" icon in the toolbar.
+    - GNOME Builder will start downloading dependencies when opened.
+    - For Visual Studio Code, enable the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) and reopen the project window with the dev container. It may take a couple minutes to build.
+2. Build and run the application.
+    - For GNOME Builder, use the "run" icon in the toolbar.
+    - For Visual Studio Code, select the "run and debug" tab in the leftmost sidebar, and then tap the run icon next to "Debug AdwaitaTemplate".
 3. Change the app's name and other information about the application in the following files (and file names):
     - `README.md`
     - `Package.swift`
