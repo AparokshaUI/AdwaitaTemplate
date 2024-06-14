@@ -1,4 +1,7 @@
-FROM swift:5.10-noble
+FROM swift:noble
 
-RUN apt-get update && \
+RUN touch /var/mail/ubuntu && \
+    chown ubuntu /var/mail/ubuntu && \
+	userdel -r ubuntu && \
+    apt-get update && \
     apt-get install -y libadwaita-1.0 libadwaita-1-dev
