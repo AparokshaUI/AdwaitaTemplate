@@ -27,7 +27,7 @@ For designing an app icon, [App Icon Preview](https://flathub.org/apps/org.gnome
 
 1. Open this project in the GNOME Builder. It will start downloading the dependencies.
     - GNOME Builder will start downloading dependencies when opened.
-    - For Visual Studio Code, enable the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) and reopen the project window with the dev container. It may take a couple minutes to build.
+    - For Visual Studio Code, enable the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers), the [Swift extension](https://marketplace.visualstudio.com/items?itemName=sswg.swift-lang) and the [CodeLLDB extension](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb) and reopen the project window with the dev container. It may take a couple minutes to build.
 2. Build and run the application.
     - For GNOME Builder, use the "run" icon in the toolbar.
     - For Visual Studio Code, select the "run and debug" tab in the leftmost sidebar, and then tap the run icon next to "Debug AdwaitaTemplate".
