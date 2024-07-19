@@ -41,6 +41,7 @@
       ],
       "build-commands": [
         "swift build -c debug --static-swift-stdlib",
+        "strip .build/debug/AdwaitaTemplate",
         "install -Dm755 .build/debug/AdwaitaTemplate /app/bin/AdwaitaTemplate",
         "install -Dm644 data/io.github.AparokshaUI.AdwaitaTemplate.metainfo.xml $DESTDIR/app/share/metainfo/io.github.AparokshaUI.AdwaitaTemplate.metainfo.xml",
         "install -Dm644 data/io.github.AparokshaUI.AdwaitaTemplate.desktop $DESTDIR/app/share/applications/io.github.AparokshaUI.AdwaitaTemplate.desktop",
