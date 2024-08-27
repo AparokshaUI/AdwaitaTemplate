@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  flatpak:
+    name: Flatpak
+    runs-on: ubuntu-latest
+    container:
+      image: bilelmoussaoui/flatpak-github-actions:gnome-45
+      options: --privileged
+    strategy:
+      matrix:
+        arch: [x86_64, aarch64]
+      fail-fast: false
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install Swift dependencies
+      run: |
+        dnf -y install libadwaita-devel
+        dnf -y install swiftlang
+    - name: Install deps
+      if: ${{ matrix.arch != 'x86_64' }}
+      run: |
+        dnf -y install docker
+    - name: Set up QEMU
+      if: ${{ matrix.arch != 'x86_64' }}
+      id: qemu
+      run: docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
+    - name: SPM Flatpak Builder Tool
+      run: |
+        swift build -c release
+        git clone https://github.com/flatpak/flatpak-builder-tools
+        mv data/release-manifest/manifest.json io.github.AparokshaUI.AdwaitaTemplate.json
+        swift flatpak-builder-tools/spm/flatpak-spm-generator.swift . .
+    - name: Flatpak Builder
+      uses: flatpak/flatpak-github-actions/flatpak-builder@v6
+      with:
+        bundle: io.github.AparokshaUI.AdwaitaTemplate.flatpak
+        manifest-path: io.github.AparokshaUI.AdwaitaTemplate.json
+        cache-key: flatpak-builder-${{ github.sha }}
+        arch: ${{ matrix.arch }}
