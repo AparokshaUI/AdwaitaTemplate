@@ -2,6 +2,7 @@ import Adwaita
 
 struct ToolbarView: View {
 
+    @State private var about = false
     var app: GTUIApp
     var window: GTUIApplicationWindow
 
@@ -17,14 +18,22 @@ struct ToolbarView: View {
                 }
                 .keyboardShortcut("w".ctrl())
                 MenuSection {
-                    MenuButton(Loc.quit, window: false) {
-                        app.quit()
+                    MenuButton(Loc.about, window: false) {
+                        about = true
                     }
-                    .keyboardShortcut("q".ctrl())
                 }
             }
             .primary()
             .tooltip(Loc.mainMenu)
+            .aboutDialog(
+                visible: $about,
+                app: "AdwaitaTemplate",
+                developer: "david-swift",
+                version: "dev",
+                icon: .custom(name: "io.github.AparokshaUI.AdwaitaTemplate"),
+                website: .init(string: "https://github.com/AparokshaUI/AdwaitaTemplate")!,
+                issues: .init(string: "https://github.com/AparokshaUI/AdwaitaTemplate/issues")!
+            )
         }
     }
 

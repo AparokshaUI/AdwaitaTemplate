@@ -12,9 +12,9 @@ closeWindow:
     en: Close Window
     de: Fenster schliessen
 
-quit:
-    en: Quit
-    de: Verlassen
+about:
+    en: About AdwaitaTemplate
+    de: Info zu AdwaitaTemplate
 
 mainMenu:
     en: Main Menu
